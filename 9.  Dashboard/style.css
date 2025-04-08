@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: Lato, sans-serif;
+    
+}
+.container{
+    display: flex;
+}
+.sidebar{
+    width: 220px;
+    color:#fff;
+    height: 100vh;
+    padding:0 1.7rem;
+    position:sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s linear;
+    background-color: rgba(115,99,186.255);
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    height: 80%;
+    position:relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: alt 0.5s ease-in-out;
+}
+
+.menu li:hover,
+ .active{
+    background: #e0e0e058;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    gap:1.5rem
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position:absolute;
+    bottom: 0;
+    width:100%;
+    left: 0;
+}
+
+/* main body section */
+
+.main-content{
+    position: relative;
+    width: 100%;
+    background: #ebe9b9;
+    padding: 1rem;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header-title{
+    color: rgba(115,99,186.255);
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-box{
+    background: rgb(241, 233, 233);
+    border-radius: 10px;
+    color: rgba(115,99,186.255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding:4px 12px;
+}
+
+.search-box input{
+    background: transparent;
+    padding:10px;
+}
+
+
+.search-box :hover{
+    transform: scale(1.2);
+}
+
+
+/* footer */
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height:5px;
+    position: relative;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    margin: 30px;
+    padding: 10px 0;
+    justify-items: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
